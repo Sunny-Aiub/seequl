@@ -1,23 +1,10 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  var isWidgetVisible = true.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  changeVisibility() {
+    isWidgetVisible.value = !isWidgetVisible.value;
+    update();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
